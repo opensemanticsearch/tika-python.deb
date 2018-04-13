@@ -1,7 +1,7 @@
 #/bin/sh
 
 VERSION=`date +%y.%m.%d`
-PACKAGE=tika-python_${VERSION}.deb
+PACKAGE=python3-tika_${VERSION}.deb
 BUILDDIR=/tmp/tika-python-$$.deb
 
 echo "Building ${PACKAGE} in temp directory ${BUILDDIR}"

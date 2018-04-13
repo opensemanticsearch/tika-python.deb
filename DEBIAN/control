@@ -1,4 +1,4 @@
-Package: tika-python
+Package: python3-tika
 Version: 18.04.13
 Section: misc
 Priority: optional
