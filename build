@@ -1,0 +1,22 @@
+#/bin/sh
+
+VERSION=`date +%y.%m.%d`
+PACKAGE=tika-python_${VERSION}.deb
+BUILDDIR=/tmp/tika-python-$$.deb
+
+echo "Building ${PACKAGE} in temp directory ${BUILDDIR}"
+
+BASEDIR=`dirname "$0"`
+
+mkdir ${BUILDDIR}
+
+# copy package metadata to build dir
+cp -a ${BASEDIR}/DEBIAN ${BUILDDIR}/
+
+mkdir -p ${BUILDDIR}/usr/lib/python3/dist-packages
+
+# copy python-tika library to created python libraries directory
+cp -a ${BASEDIR}/../tika-python/tika ${BUILDDIR}/usr/lib/python3/dist-packages/
+
+# Build package
+dpkg -b ${BUILDDIR} ${PACKAGE}

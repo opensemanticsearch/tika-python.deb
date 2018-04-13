@@ -1,0 +1,11 @@
+Package: tika-python
+Version: 18.04.13
+Section: misc
+Priority: optional
+Architecture: all
+Depends: python3-requests(>=0)
+Installed-Size: 10
+Maintainer: Markus Mandalka <debian@mandalka.name>
+Homepage: https://github.com/opensemanticsearch/tika-python.deb
+Description: Tika-Python
+ Tika-Python is a Python binding to the Apache Tika™ REST services allowing Tika to be called natively in the Python community.
